@@ -1,0 +1,31 @@
+#profile-picture {
+    background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAxvZZLOTl4vXf2ZbRelj5WR0nPMo7hPlmptUwEccL77zJYrMdSAJ_NaxdKUgeAtK4WVe_nOtmuFtXwEDDJCi3-RxLwfH7TnSxIqOrAK-MIzFUogUSSvKMq_SpCiGo4G1m1uTiOtsmC6yfWeRIbmnR0K7D5jwVDzzimqbTNBwO7L7VCUg8iP3fGOohTdpgLuM8jmUasmXg_K1rE6TiyzvE15JnvyMulMNcaoM7kLCnFCYQ-aPrOdtweD0Qp0QTJWwVMCCz3e3Bf8N2R");
+}
+
+#change-language {
+  display: flex;
+  max-width: 480px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  height: 2.5rem;
+  background-color: #f1f2f4;
+  color: #121417;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.015em;
+  min-width: 0;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
+
+#header-button {
+  color: #121417;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: normal;
+}
