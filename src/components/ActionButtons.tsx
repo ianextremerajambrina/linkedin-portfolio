@@ -4,13 +4,9 @@ import { data } from "../data/data";
 import { LanguageContext } from "../App";
 
 export default function ActionButtons() {
-    const [isClicked, setIsClicked] = useState(false);
+
     const { language } = useContext(LanguageContext);
     const headerButtons = data[language].headerButtons;
-
-    function handleClick(): void {
-        setIsClicked((isClicked) => !isClicked); // Toggle the value of isClicked
-    }
 
   return (
     <>
@@ -19,8 +15,7 @@ export default function ActionButtons() {
           <Link
             key={btn.label}
             id="header-button"
-            to={isClicked ? '/' : btn.link}
-            onClick={() => handleClick()}
+            to={btn.link}
           >
             {btn.label}
           </Link>

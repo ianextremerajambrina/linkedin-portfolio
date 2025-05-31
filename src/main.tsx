@@ -7,6 +7,7 @@ import AboutMe from './components/AboutMe.tsx';
 import Portfolio from './components/Portfolio.tsx';
 import Cv from './components/Cv.tsx';
 import Contact from './components/Contact.tsx';
+import Services from './components/Services.tsx';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
       { path: 'portfolio', element: <Portfolio /> },
       { path: 'about', element: <AboutMe /> },
       { path: 'contact', element: <Contact /> },
+      { path: 'services', element: <Services /> }
     ],
   },
 ]);

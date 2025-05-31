@@ -12,7 +12,22 @@ export type LanguageData = {
   description: string;
   location: string;
   headerButtons: HeaderButton[];
-  profileButtons: string[];
+  profileButtons: HeaderButton[]; // Changed from string[]
+  contact: {
+    title: string;
+    recruiterSection: {
+      heading: string;
+      description: string;
+      emailLabel: string;
+      phoneLabel: string;
+      closing: string;
+    };
+    servicesSection: {
+      heading: string;
+      description: string;
+      buttonLabel: string;
+    };
+  };
 };
 
 export type DataType = {
@@ -45,7 +60,35 @@ export const data: DataType = {
         link: '/contact'
       }
     ],
-    profileButtons: ['Ver portfolio','Descargar CV','Contratar servicios']
+    profileButtons: [
+      {
+        label: 'Ver portfolio',
+        link: '/portfolio'
+      },
+      {
+        label: 'Descargar CV',
+        link: '/cv'
+      },
+      {
+        label: 'Contratar servicios',
+        link: '/services'
+      }
+    ],
+    contact: {
+      title: "Contacto",
+      recruiterSection: {
+        heading: "Para Reclutadores",
+        description: "Gracias por tu interés. Puedes contactarme a través de los siguientes canales:",
+        emailLabel: "Correo electrónico",
+        phoneLabel: "Teléfono",
+        closing: "Estoy abierto a discutir oportunidades. No dudes en contactarme."
+      },
+      servicesSection: {
+        heading: "¿Buscas Servicios?",
+        description: "Si estás interesado en contratar mis servicios, por favor visita la página de servicios:",
+        buttonLabel: "Contratar servicios"
+      }
+    }
   },
   en: {
     name: "Ian Extremera Jambrina",
@@ -70,7 +113,35 @@ export const data: DataType = {
         link: '/contact'
       }
     ],
-    profileButtons: ['View portfolio','Download CV','Hire me']
+    profileButtons: [
+      {
+        label: 'View portfolio',
+        link: '/portfolio'
+      },
+      {
+        label: 'Download CV',
+        link: '/cv'
+      },
+      {
+        label: 'Hire my services',
+        link: '/services'
+      }
+    ],
+    contact: {
+      title: "Contact",
+      recruiterSection: {
+        heading: "For Recruiters",
+        description: "Thank you for your interest. You can reach out to me through the following channels:",
+        emailLabel: "Email",
+        phoneLabel: "Phone",
+        closing: "I am open to discussing opportunities. Please feel free to contact me."
+      },
+      servicesSection: {
+        heading: "Looking for Services?",
+        description: "If you are interested in hiring my services, please visit the services page:",
+        buttonLabel: "Hire My Services"
+      }
+    }
   }
 };
 
