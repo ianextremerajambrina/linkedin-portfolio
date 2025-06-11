@@ -1,5 +1,5 @@
 import { useState, createContext } from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
 import './App.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -18,11 +18,14 @@ export const LanguageContext = createContext<LanguageContextType>({
 
 function App() {
   const [language, setLanguage] = useState<Language>('es');
+  const location = useLocation();
+
+  const isHomePage = location.pathname === '/';
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>
       <Header />
-      <ProfileSection />
+     {isHomePage && <ProfileSection /> }
       <Outlet />
       <Footer />
     </LanguageContext.Provider>

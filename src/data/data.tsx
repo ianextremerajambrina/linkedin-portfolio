@@ -12,7 +12,7 @@ export type LanguageData = {
   description: string;
   location: string;
   headerButtons: HeaderButton[];
-  profileButtons: HeaderButton[]; // Changed from string[]
+  profileButtons: HeaderButton[];
   contact: {
     title: string;
     recruiterSection: {
@@ -22,12 +22,21 @@ export type LanguageData = {
       phoneLabel: string;
       closing: string;
     };
+    aboutMe: {
+      description: string;
+    };
     servicesSection: {
       heading: string;
       description: string;
       buttonLabel: string;
+      services: Array<{
+        title: string;
+        description: string;
+        icon?: string;
+      }>;
     };
   };
+  backButtonLabel: string;
 };
 
 export type DataType = {
@@ -83,12 +92,30 @@ export const data: DataType = {
         phoneLabel: "Teléfono",
         closing: "Estoy abierto a discutir oportunidades. No dudes en contactarme."
       },
+      aboutMe: {
+        description: "Soy un Desarrollador Full Stack con amplios conocimientos en administración de sistemas. He cursado numerosos ciclos formativos relacionados con la informática y la tecnología: 2018-2020: CFGM Sistemas Microinformáticos y Redes, 2020-2022: CFGS Administración de Sistemas Informáticos en Red, 2022-2025: CFGS Desarrollo de Aplicaciones Multiplataforma. Mi formación se complementa con cursos de ciberseguridad, bases de datos, virtualización y desarrollo web. Destaco por mi capacidad de adaptación, trabajo en equipo y responsabilidad. Siempre busco nuevos retos y oportunidades para crecer profesionalmente, aportando soluciones innovadoras y eficientes tanto en desarrollo como en administración de sistemas.",
+      },
       servicesSection: {
         heading: "¿Buscas Servicios?",
-        description: "Si estás interesado en contratar mis servicios, por favor visita la página de servicios:",
-        buttonLabel: "Contratar servicios"
+        description: "Ofrezco soluciones tecnológicas innovadoras y personalizadas para impulsar tu negocio:",
+        buttonLabel: "Contratar servicios",
+        services: [
+          {
+            title: "Implementación de Inteligencia Artificial",
+            description: "Desarrollo e integración de soluciones de IA para optimizar procesos, análisis de datos y automatización inteligente de tareas."
+          },
+          {
+            title: "Administración y Creación de Infraestructuras en la Nube",
+            description: "Diseño, implementación y gestión de infraestructuras cloud escalables y seguras, adaptadas a tus necesidades específicas."
+          },
+          {
+            title: "Diseño de Sitios Web Full Stack",
+            description: "Desarrollo completo de aplicaciones web, desde interfaces atractivas y responsivas hasta robustos sistemas backend."
+          }
+        ]
       }
-    }
+    },
+    backButtonLabel: "Volver al inicio"
   },
   en: {
     name: "Ian Extremera Jambrina",
@@ -136,12 +163,30 @@ export const data: DataType = {
         phoneLabel: "Phone",
         closing: "I am open to discussing opportunities. Please feel free to contact me."
       },
+      aboutMe: {
+        description: "I am a Full Stack Developer with extensive knowledge in systems administration. I have completed numerous training cycles related to computer science and technology: 2018-2020: Intermediate Vocational Training in Microcomputer Systems and Networks, 2020-2022: Higher Vocational Training in Network Computer Systems Administration, 2022-2025: Higher Vocational Training in Multiplatform Application Development. My training is complemented with courses in cybersecurity, databases, virtualization and web development. I stand out for my adaptability, teamwork and responsibility. I'm always looking for new challenges and opportunities to grow professionally, providing innovative and efficient solutions in both development and systems administration.",
+      },
       servicesSection: {
         heading: "Looking for Services?",
-        description: "If you are interested in hiring my services, please visit the services page:",
-        buttonLabel: "Hire My Services"
+        description: "I offer innovative and customized technological solutions to boost your business:",
+        buttonLabel: "Hire My Services",
+        services: [
+          {
+            title: "Artificial Intelligence Implementation",
+            description: "Development and integration of AI solutions for process optimization, data analysis, and intelligent task automation."
+          },
+          {
+            title: "Cloud Infrastructure Management and Creation",
+            description: "Design, implementation, and management of scalable and secure cloud infrastructures, tailored to your specific needs."
+          },
+          {
+            title: "Full Stack Web Design",
+            description: "Complete web application development, from attractive and responsive interfaces to robust backend systems."
+          }
+        ]
       }
-    }
+    },
+    backButtonLabel: "Back to Home"
   }
 };
 
